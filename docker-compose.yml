@@ -30,6 +30,7 @@ services:
   db:
     container_name: misp_db
     image: mysql/mysql-server:5.7
+    command: --sql_mode=""
     restart: unless-stopped
     volumes:
       - ${DATA_DIR}/db:/var/lib/mysql
